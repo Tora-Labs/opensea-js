@@ -32,7 +32,7 @@
   },
   "types": "lib/index.d.ts",
   "dependencies": {
-    "@opensea/seaport-js": "git+https://github.com/Tora-Labs/seaport-js.git",
+    "@opensea/seaport-js": "https://github.com/Tora-Labs/seaport-js#396a903549b26c3933628f47ff6551346cbde8dd",
     "ajv": "^8.11.0",
     "bignumber.js": "9.0.2",
     "ethereumjs-abi": "git+https://github.com/ProjectWyvern/ethereumjs-abi.git",
