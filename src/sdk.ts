@@ -102,6 +102,7 @@ import {
   WyvernFTAsset,
   WyvernNFTAsset,
   WyvernSchemaName,
+  GasConfig,
 } from "./types";
 import {
   encodeAtomicizedBuy,
@@ -1007,11 +1008,13 @@ export class OpenSeaSDK {
     accountAddress,
     recipientAddress,
     domain,
+    gasConfig
   }: {
     order: OrderV2;
     accountAddress: string;
     recipientAddress?: string;
     domain?: string;
+    gasConfig?: GasConfig;
   }): Promise<string> {
     const isPrivateListing = !!order.taker;
     if (isPrivateListing) {
@@ -1035,6 +1038,7 @@ export class OpenSeaSDK {
           accountAddress,
           recipientAddress,
           domain,
+          gasConfig
         });
         const transaction = await executeAllActions();
         transactionHash = transaction.hash;

@@ -14,6 +14,12 @@ import type { OrderV2 } from "./orders/types";
 export { HowToCall, Network };
 export type { ECSignature };
 
+export type GasConfig = {
+  gasLimit: string;
+  maxFeePerGas: string;
+  maxPriorityFeePerGas: string
+}
+
 /**
  * Events emitted by the SDK. There are five types:
  * 1. Transaction events, which tell you when a new transaction was
